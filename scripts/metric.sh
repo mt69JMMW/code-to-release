@@ -1,12 +1,12 @@
 #!/bin/bash
 
 MODEL_PATH="/mnt/data/zekai/flan-t5-large-squad2"
-DATA_PATH="/mnt/data/zekai/generator_data_qasper.json"
-PREDICTION_PATH="/mnt/data/zekai/iter_refine_qasper_flan_t5_900.json"
-SAVE_PATH="iter_refine_qasper_flan_t5_qags_scores.json"
+DATA_PATH="/path/to/data"
+PREDICTION_PATH="/path/to/prediction"
+SAVE_PATH="/path/to/saved/scores"
 QG_MODEL_PATH="lmqg/t5-large-squad-qg"
 
-nohup python3 metrics.py \
+python3 metrics.py \
 --model_path $MODEL_PATH \
 --data_path $DATA_PATH \
 --prediction_path $PREDICTION_PATH \
@@ -15,5 +15,4 @@ nohup python3 metrics.py \
 --num_beams 2 \
 --n_questions 20 \
 --qg_model_path $QG_MODEL_PATH \
---from_refine "True" \
-> logs/metrics_iter_refine_qasper_flan_t5_20230201.log 2>&1 &
+--from_refine "True"
