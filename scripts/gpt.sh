@@ -1,4 +1,4 @@
-OPENAI_API_KEY="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"
+OPENAI_API_KEY="this is a key"
 DATA_PATH="/mnt/data/zekai/generator_data.json"
 BASE_MODEL_PATH="/mnt/data/zekai/llama2-7b-chat-hf"
 OUTPUT_PATH="iter_refine_gpt_results_llama2_5.json"
