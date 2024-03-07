@@ -1,10 +1,10 @@
-DATA_PATH="/mnt/data/zekai/generator_data.json"
-BASE_MODEL_PATH="/mnt/data/zekai/llama2-7b-chat-hf"
-LORA_PATH="/mnt/data/zekai/feedback_model_7b/checkpoint-600"
-FEEDBACK_MODEL_PATH="/mnt/data/zekai/vicuna-7b-v1.3"
-OUTPUT_PATH="iter_refine_results_llama2_300_592.json"
+DATA_PATH="/path/to/data"
+BASE_MODEL_PATH="/path/to/base/model"
+FEEDBACK_MODEL_PATH="/path/to/feedback/model"
+LORA_PATH="/path/to/feedback/model/lora/weights"
+OUTPUT_PATH="/path/to/output"
 
-nohup python3 iter_refine_on_feedback.py \
+python3 iter_refine_on_feedback.py \
 --data_path $DATA_PATH \
 --base_model_path $BASE_MODEL_PATH \
 --feedback_model_path $FEEDBACK_MODEL_PATH \
@@ -15,5 +15,4 @@ nohup python3 iter_refine_on_feedback.py \
 --threshold 0.5 \
 --num_beams 2 \
 --num_correction_steps 6 \
---correction_batch_size 4 \
-> logs/iter_refine_results_llama2_300_592.log 2>&1 &
+--correction_batch_size 4
