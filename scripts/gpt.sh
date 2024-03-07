@@ -1,9 +1,9 @@
-OPENAI_API_KEY="this is a key"
-DATA_PATH="/mnt/data/zekai/generator_data.json"
-BASE_MODEL_PATH="/mnt/data/zekai/llama2-7b-chat-hf"
-OUTPUT_PATH="iter_refine_gpt_results_llama2_5.json"
+OPENAI_API_KEY="your openai key"
+DATA_PATH="/path/to/data"
+BASE_MODEL_PATH="/path/to/base/model"
+OUTPUT_PATH="/path/to/output"
 
-nohup python3 iter_refine_gpt.py \
+python3 iter_refine_gpt.py \
 --data_path $DATA_PATH \
 --base_model_path $BASE_MODEL_PATH \
 --save_path $OUTPUT_PATH \
@@ -13,5 +13,4 @@ nohup python3 iter_refine_gpt.py \
 --threshold 0.5 \
 --num_beams 2 \
 --num_correction_steps 4 \
---correction_batch_size 4 \
-> logs/iter_refine_gpt_results_llama2_20230112.log 2>&1 &
+--correction_batch_size 4
