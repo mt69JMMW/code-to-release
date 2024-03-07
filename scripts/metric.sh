@@ -1,8 +1,8 @@
 #!/bin/bash
 
-MODEL_PATH="/mnt/data/zekai/flan-t5-large-squad2"
+MODEL_PATH="sjrhuschlee/flan-t5-large-squad2"
 DATA_PATH="/path/to/data"
-PREDICTION_PATH="/path/to/prediction"
+PREDICTION_PATH="/path/to/output"
 SAVE_PATH="/path/to/saved/scores"
 QG_MODEL_PATH="lmqg/t5-large-squad-qg"
 
